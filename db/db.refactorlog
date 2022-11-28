@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="6eb7a2ea-e986-4330-ada0-d10cbf3abf94" ChangeDateTime="05/31/2021 14:03:32">
+    <Property Name="ElementName" Value="[dbo].[agentlog].[agenttid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[agentlog]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="agid" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fb9eb604-6258-40b7-be21-a5ed7bec2118" ChangeDateTime="06/01/2021 09:55:54">
+    <Property Name="ElementName" Value="[dbo].[agentStatus].[agentid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[agentStatus]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dbfa7778-7d76-42b1-a148-d2235877cb77" ChangeDateTime="06/02/2021 08:25:28">
+    <Property Name="ElementName" Value="[dbo].[Sessions].[end]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sessions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="enddate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="337f58ac-333f-46ea-a129-c647deb90a72" ChangeDateTime="06/02/2021 09:55:37">
+    <Property Name="ElementName" Value="[dbo].[mised_at].[date]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[mised_at]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="rec_date" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b3d7d93f-4cf3-48bc-b7b2-6798dc56d9f4" ChangeDateTime="08/09/2021 19:43:24">
+    <Property Name="ElementName" Value="[dbo].[Sessions].[size]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sessions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="video_size" />
+  </Operation>
+</Operations>

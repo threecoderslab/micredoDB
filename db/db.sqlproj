@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>db</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{2c11c7d8-2fb3-4895-a983-22d7420d77f3}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>db</RootNamespace>
+    <AssemblyName>db</AssemblyName>
+    <ModelCollation>1033,CS</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_BIN</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\function" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\org.sql" />
+    <Build Include="dbo\Tables\agent.sql" />
+    <Build Include="dbo\Tables\agent_access.sql" />
+    <Build Include="dbo\Tables\Sessions.sql" />
+    <Build Include="dbo\Tables\agentStatus.sql" />
+    <Build Include="dbo\Tables\sector.sql" />
+    <Build Include="dbo\Tables\Client_control_types.sql" />
+    <Build Include="dbo\Tables\Client_front_control.sql" />
+    <Build Include="dbo\Tables\Client_control.sql" />
+    <Build Include="dbo\Tables\ActiveRooms.sql" />
+    <Build Include="Security\OFG_artak.abrahamyan.sql" />
+    <Build Include="Security\restuser.sql" />
+    <Build Include="Security\restuser_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\UserLogin.sql" />
+    <Build Include="dbo\Stored Procedures\GetUserDetails.sql" />
+    <Build Include="dbo\Stored Procedures\CreateActiveRoom.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteActiveRoom.sql" />
+    <Build Include="dbo\Tables\org_details.sql" />
+    <Build Include="dbo\Tables\agentlog.sql" />
+    <Build Include="dbo\Tables\agent_operation.sql" />
+    <Build Include="dbo\Tables\session_client_data.sql" />
+    <Build Include="dbo\Tables\sessions_picture.sql" />
+    <Build Include="dbo\Tables\sessionstatus.sql" />
+    <Build Include="dbo\Tables\mised_at.sql" />
+    <Build Include="dbo\Tables\SessionComments.sql" />
+    <Build Include="dbo\Stored Procedures\AddAgentCommentToSession.sql" />
+    <Build Include="dbo\Stored Procedures\AddFilesToSession.sql" />
+    <Build Include="dbo\Stored Procedures\AddClientControlvalueSession.sql" />
+    <Build Include="dbo\Stored Procedures\AddVIdeoRecordingTOSession.sql" />
+    <Build Include="dbo\Stored Procedures\AgentLogOut.sql" />
+    <Build Include="dbo\function\allsectors_1.sql" />
+    <Build Include="dbo\function\checklogin.sql" />
+    <Build Include="dbo\Tables\config.sql" />
+    <Build Include="dbo\Stored Procedures\endcall.sql" />
+    <Build Include="dbo\function\Get5topsessionsByAgentid.sql" />
+    <Build Include="dbo\function\GetCallDetailBycontrols.sql" />
+    <Build Include="dbo\function\GetCallDetailBySessionID.sql" />
+    <Build Include="dbo\function\GetClientControlbyOrgId.sql" />
+    <Build Include="dbo\function\GetClientControlbyOrgIdNojs.sql" />
+    <Build Include="dbo\function\GetorgbySectionid.sql" />
+    <Build Include="dbo\function\GetorgDetails.sql" />
+    <Build Include="dbo\function\GetTopRatedOrg.sql" />
+    <Build Include="dbo\Stored Procedures\Log_data.sql" />
+    <Build Include="dbo\Stored Procedures\missedcall.sql" />
+    <Build Include="dbo\Stored Procedures\openroom.sql" />
+    <Build Include="dbo\Stored Procedures\RemoveRoom.sql" />
+    <Build Include="dbo\Stored Procedures\Startcall.sql" />
+    <Build Include="dbo\Stored Procedures\AddAgent.sql" />
+    <Build Include="dbo\Stored Procedures\AddClientControl.sql" />
+    <Build Include="dbo\Stored Procedures\GetAgentsByOrgId.sql" />
+    <Build Include="dbo\Stored Procedures\GetControlsByAgentId.sql" />
+    <Build Include="dbo\function\GetActiveRoomByOrgId.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateAgent.sql" />
+    <Build Include="dbo\Stored Procedures\GetAgentById.sql" />
+    <Build Include="GetSessionDatabyControls.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateControl.sql" />
+    <Build Include="dbo\Stored Procedures\GetControlById.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="db.refactorlog" />
+  </ItemGroup>
+</Project>
